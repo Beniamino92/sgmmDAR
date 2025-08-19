@@ -1,7 +1,7 @@
 # sggmDAR
 
 <p align="center">
-<img src="https://github.com/Beniamino92/sgmmDAR/blob/main/images/main.pdf" width="700" heigth="100"/> 
+<img src="https://github.com/Beniamino92/sgmmDAR/blob/main/images/main.png" width="700" heigth="100"/> 
 </p>
 
 **Sparse Gaussian Graphical modeling with Discrete Autoregressive processes**  
