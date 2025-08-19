@@ -64,14 +64,14 @@ install.packages(c(
 
 - **Switching rule (DAR-$P$):**
 
-  $$
+  $
   p(\gamma_t = i \mid \gamma_{t-1:t-P})
   \;=\;
   \sum_{l=1}^{P} \phi_l\, \mathbf{1}\{\gamma_{t-l} = i\}
   \;+\; \phi_0\, \pi_i,
   \qquad
   \phi_0 = 1 - \sum_{l=1}^{P} \phi_l.
-  $$
+  $
 
 - **Order learning:**  
   A modified stick-breaking prior with **cumulative shrinkage** on $\{\phi_l\}$ forces higher lags to zero after the first inactive lag—thus estimating the effective lag order $\hat{P}$ without RJMCMC.
