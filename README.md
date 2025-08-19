@@ -137,7 +137,9 @@ posteriorPredictive = sggmDAR_PosteriorPredictive(mvShrinkageDAR_fit, K̂;
                                                          modal = true,
                                                          plt = false)
 sggmDAR_PlotPosteriorPredictive(obs, K̂, posteriorPredictive[:ŷ], posteriorPredictive[:γ̂])
-
 ```
+<p align="center"> <img src="https://github.com/Beniamino92/sgmmDAR/blob/main/images/postPred.png" width="500"/> </p>
+
+
 
 
