@@ -32,4 +32,27 @@ sggmDAR/
 └─ README.md # you're reading it
 ```
 
+## R (for post-processing and plots)
+
+Several post-processing steps (such as label-switching resolution, correlation/graph visualizations, and figure assembly) are performed in **R**.  
+This can be done directly in R, or from Julia using the [`RCall.jl`](https://github.com/JuliaInterop/RCall.jl) package.
+
+### Required R packages
+
+Install the following R packages before running the post-processing:
+
+```r
+install.packages(c(
+  "corrplot",
+  "label.switching",
+  "gdata",
+  "gridExtra",
+  "ggplot2",
+  "Matrix",
+  "RColorBrewer",
+  "matrixcalc"
+))
+
+
+
 
