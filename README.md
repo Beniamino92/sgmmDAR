@@ -1,12 +1,15 @@
 # sggmDAR
 
-<p align="center">
-<img src="https://github.com/Beniamino92/sgmmDAR/blob/main/images/main.png" width="700" heigth="100"/> 
-</p>
+
 
 **Sparse Gaussian Graphical modeling with Discrete Autoregressive processes**  
 
 Julia code for Bayesian estimation of **time-varying Gaussian graphical models** under **latent regime switching** with **discrete autoregressive (DAR) dynamics** and **automatic order/complexity learning**.
+
+<p align="center">
+  <img src="https://github.com/Beniamino92/sggmDAR/blob/main/images/main.png" width="300"/>
+</p>
+
 
 ## What is it?
 
