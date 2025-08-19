@@ -6,9 +6,6 @@
 
 Julia code for Bayesian estimation of **time-varying Gaussian graphical models** under **latent regime switching** with **discrete autoregressive (DAR) dynamics** and **automatic order/complexity learning**.
 
-<p align="center"> <img src="https://github.com/Beniamino92/sgmmDAR/blob/main/images/main.png" width="400"/> </p>
-
-
 ## What is it?
 
 `sggmDAR` fits multivariate time series with an unobserved, finite set of connectivity “states.”  
@@ -19,6 +16,10 @@ Key pieces:
 - **Graphs within states:** **Graphical Horseshoe (GHS)** priors shrink off-diagonal precision entries toward zero to recover sparse conditional dependence (precision) matrices state-by-state.
 - **Inference:** A custom MCMC with birth/death moves for DAR order, block updates for precision matrices, and a forward-backward–style update for the hidden sequence. Post-processing handles label switching.
 - **Use cases:** Dynamic brain connectivity (fMRI), multi-sensor networks, macro/finance systems—any setting where **graphs evolve through recurring states** rather than continuously.
+
+<p align="center"> <img src="https://github.com/Beniamino92/sgmmDAR/blob/main/images/main.png" width="500"/> </p>
+
+
 
 The full methodology appears in:
 
