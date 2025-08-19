@@ -145,7 +145,7 @@ sggmDAR_PlotPosteriorPredictive(obs, K̂, posteriorPredictive[:ŷ], posteriorPr
 ``` julia
 plotHeat_multiple(Ω_part_est)
 ```
-<p align="center"> <img src="https://github.com/Beniamino92/sgmmDAR/blob/main/images/partial_corr.png" width="500"/> </p>
+<p align="center"> <img src="https://github.com/Beniamino92/sgmmDAR/blob/main/images/partial_corr.png" width="700"/> </p>
 
 
 
