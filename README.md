@@ -97,6 +97,42 @@ Below are a few quick snippets from `sgmmDAR_tutorial.jl`. See the script for en
 
 # Run Gibbs sampler (~10 minutes depending on settings)
 mvShrinkageDAR_fit = sggmDAR_GibbsSampler(obs, n_states, P_max, n_MCMC, hyper_parms)
+```
 
+### 2) Extract (burn + thin)
+
+```julia
+burn_MCMC = 5_000
+thin_MCMC = 10
+
+fit_extract = sggmDAR_ExtractFit(
+    mvShrinkageDAR_fit;
+    burn_MCMC = burn_MCMC,
+    thin_MCMC = thin_MCMC,
+    plt = false,
+)
+```
+
+### 3) Reshape + (optionally) relabel states
+
+```julia
+relabel = true  # use ECR or similar relabeling internally
+fit_reshaped = ReshapeFit(fit_extract; relabel = relabel)
+```
+
+### 4) Posterior predictive draws
+
+```julia
+# Number of draws for predictive summaries
+Khat = 100
+
+posteriorPredictive = sggmDAR_PosteriorPredictive(
+    mvShrinkageDAR_fit,
+    Khat;
+    relabel = relabel,
+    modal = true,
+    plt = false,
+)
+```
 
 
