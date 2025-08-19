@@ -54,7 +54,7 @@ install.packages(c(
 ))
 ```
 
-## Model summary (one-page intuition)
+## Model summary 
 
 - **Observations:**  
   $y_t \mid \gamma_t = j \sim \mathcal{N}_D(\mu_j,\ \Omega_j^{-1})$, with sparse precision matrix $\Omega_j$ for each state $j$.
