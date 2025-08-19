@@ -6,6 +6,11 @@
 
 Julia code for Bayesian estimation of **time-varying Gaussian graphical models** under **latent regime switching** with **discrete autoregressive (DAR) dynamics** and **automatic order/complexity learning**.
 
+### Contact
+
+For questions or collaboration inquiries, please contact Beniamino Hadj-Amar at hadjamar@mailbox.sc.edu
+
+
 ## What is it?
 
 `sggmDAR` fits multivariate time series with an unobserved, finite set of connectivity “states.”  
@@ -146,6 +151,5 @@ sggmDAR_PlotPosteriorPredictive(obs, K̂, posteriorPredictive[:ŷ], posteriorPr
 plotHeat_multiple(Ω_part_est)
 ```
 <p align="center"> <img src="https://github.com/Beniamino92/sgmmDAR/blob/main/images/partial_corr.png" width="700"/> </p>
-
 
 
