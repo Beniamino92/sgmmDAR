@@ -140,6 +140,12 @@ sggmDAR_PlotPosteriorPredictive(obs, K̂, posteriorPredictive[:ŷ], posteriorPr
 ```
 <p align="center"> <img src="https://github.com/Beniamino92/sgmmDAR/blob/main/images/post_pred.png" width="500"/> </p>
 
+### 6) Estimated partial correlations (state-specific) 
+
+``` julia
+plotHeat_multiple(Ω_part_est)
+```
+<p align="center"> <img src="https://github.com/Beniamino92/sgmmDAR/blob/main/images/partial_corr.png" width="500"/> </p>
 
 
 
