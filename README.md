@@ -81,4 +81,22 @@ install.packages(c(
   A **Graphical Horseshoe prior** on the off-diagonal entries of each precision matrix $\Omega_j$ (with global & local shrinkage) combined with credibility-interval selection yields sparse conditional graphs for each regime.
 
 
+## Tutorial snapshots
+
+Below are a few quick snippets from `sgmmDAR_tutorial.jl`. See the script for end-to-end details.
+
+### 1) Fit the model
+
+```julia
+# Inputs prepared earlier:
+#   obs :: Matrix{Float64}  # T × D time series
+#   n_states :: Int         # overfitted maximum number of regimes
+#   P_max :: Int            # maximum DAR order
+#   n_MCMC :: Int           # total iterations
+#   hyper_parms :: NamedTuple or Dict with priors
+
+# Run Gibbs sampler (~10 minutes depending on settings)
+mvShrinkageDAR_fit = sggmDAR_GibbsSampler(obs, n_states, P_max, n_MCMC, hyper_parms)
+
+
 
