@@ -22,7 +22,7 @@ The full methodology appears in:
 ---
 
 ## Repository layout
-
+```
 sggmDAR/
 ├─ src/ # (if you package-ize) core Julia code
 ├─ include/
@@ -31,4 +31,6 @@ sggmDAR/
 ├─ sgmmDAR_tutorial.jl # end-to-end tutorial script (examples & plots)
 ├─ Project.toml # Julia project manifest (if included)
 └─ README.md # you're reading it
+```
+
 
