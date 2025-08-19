@@ -62,16 +62,8 @@ install.packages(c(
 - **Hidden states:**  
   $\gamma_t \in \{1,\dots,M\}$, with $M$ learned via an overfitted mixture and a sparse Dirichlet prior on the innovations.
 
-- **Switching rule (DAR-$P$):**
-
-  $$
-  p(\gamma_t = i \mid \gamma_{t-1:t-P})
-  \;=\;
-  \sum_{l=1}^{P} \phi_l \, \mathbf{1}\{\gamma_{t-l} = i\}
-  \;+\; \phi_0 \, \pi_i,
-  \qquad
-  \phi_0 = 1 - \sum_{l=1}^{P} \phi_l.
-  $$
+- **Switching rule (DAR-$P$):**  
+  $p(\gamma_t = i \mid \gamma_{t-1:t-P}) = \sum_{l=1}^{P} \phi_l \mathbf{1}\{\gamma_{t-l}=i\} + \phi_0 \pi_i,\ \ \phi_0 = 1 - \sum_{l=1}^{P} \phi_l.$
 
 
 - **Order learning:**  
