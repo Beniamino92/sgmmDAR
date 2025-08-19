@@ -120,19 +120,24 @@ relabel = true  # use ECR or similar relabeling internally
 fit_reshaped = ReshapeFit(fit_extract; relabel = relabel)
 ```
 
-### 4) Posterior predictive draws
+### 4) Posterior estimates of K and M
 
 ```julia
-# Number of draws for predictive summaries
-Khat = 100
+# Posterior estimates of K and P
+K̂ = fit_reshaped[:bayes_est][:K̂]
+P̂ = fit_reshaped[:bayes_est][:P̂]
+```
 
-posteriorPredictive = sggmDAR_PosteriorPredictive(
-    mvShrinkageDAR_fit,
-    Khat;
-    relabel = relabel,
-    modal = true,
-    plt = false,
-)
+### 5) Posterior predictive draws + plot
+
+```julia
+posteriorPredictive = sggmDAR_PosteriorPredictive(mvShrinkageDAR_fit, K̂;
+                                                         n_draw = 100,
+                                                         relabel = relabel,
+                                                         modal = true,
+                                                         plt = false)
+sggmDAR_PlotPosteriorPredictive(obs, K̂, posteriorPredictive[:ŷ], posteriorPredictive[:γ̂])
+
 ```
 
 
