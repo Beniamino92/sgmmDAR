@@ -52,6 +52,30 @@ install.packages(c(
   "RColorBrewer",
   "matrixcalc"
 ))
+```
+
+## Model summary (one-page intuition)
+
+- **Observations:**  
+  \[
+  y_t \mid \gamma_t = j \sim \mathcal{N}_D(\mu_j, \Omega_j^{-1}),
+  \]
+  with sparse precision matrix \(\Omega_j\) for each state \(j\).
+
+- **Hidden states:**  
+  \(\gamma_t \in \{1, \dots, M\}\), with \(M\) learned via an overfitted mixture and a sparse Dirichlet prior on the innovations.
+
+- **Switching rule (DAR-P):**  
+  \[
+  p(\gamma_t = i \mid \gamma_{t-1:t-P}) \;=\; \sum_{l=1}^P \phi_l \, \mathbf{1}\{\gamma_{t-l} = i\} \;+\; \phi_0 \, \pi_i,
+  \quad \phi_0 = 1 - \sum_{l=1}^P \phi_l.
+  \]
+
+- **Order learning:**  
+  A modified stick-breaking prior with **cumulative shrinkage** on \(\{\phi_l\}\) forces higher lags to zero after the first inactive lag—thus estimating the effective lag order \(\hat{P}\) without RJMCMC.
+
+- **Graph recovery:**  
+  A **Graphical Horseshoe prior** on the off-diagonal entries of each precision matrix \(\Omega_j\) (with global & local shrinkage) combined with credibility-interval selection yields sparse conditional graphs for each regime.
 
 
 
