@@ -29,7 +29,6 @@ sggmDAR/
 │ ├─ utilites_sggmDAR.jl # utilities (I/O, helpers, diagnostics)
 │ └─ structures.jl # data structures / types
 ├─ sgmmDAR_tutorial.jl # end-to-end tutorial script (examples & plots)
-├─ Project.toml # Julia project manifest (if included)
 └─ README.md # you're reading it
 ```
 
